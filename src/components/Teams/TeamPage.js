@@ -11,7 +11,7 @@ class TeamPage extends Component {
             this.props.teamList.length > 0 ? this.props.teamList.map(team => {
               return (
                 <div className="card" key={team.id}>
-                  <img className="logo" src={team.logo}/>
+                  <img alt="teamlogo" className="logo" src={team.logo}/>
                   <div className="textContainer">
                     <div className="title">{team.name}</div>
                     <div className="homeLocation">{team.homeLocation}</div>
