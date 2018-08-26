@@ -15,7 +15,7 @@ class TeamPage extends Component {
                     <div className="title">{team.name}</div>
                     <div className="homeLocation">{team.homeLocation}</div>
                   </div>
-                  <div className="viewRosterContainer">
+                  <div className="viewRosterContainer" onClick={this.props.showRoster}>
                     <div className="viewRosterBtn">View Roster</div>
                   </div>
                 </div>

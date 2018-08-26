@@ -8,12 +8,16 @@ import TeamPage from './components/Teams/TeamPage';
 class App extends Component {
 
   state = {
-    teamList: []
+    teamList: [],
+    rosterList: [],
+    rosterClicked: false
   }
 
   getApi = async (e) => {
     const api_call = await fetch('https://api.overwatchleague.com/teams');
     const data = await api_call.json()
+
+
     const teamList = data.competitors.map(teamResults => (
       {
         id: `${teamResults.competitor.id}`,
@@ -34,7 +38,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <TeamPage teamList={this.state.teamList} getApi={this.getApi()}/>
+        <TeamPage teamList={this.state.teamList} getApi={this.getApi()} showRoster={this.showRoster}/>
       </div>
     );
   }
