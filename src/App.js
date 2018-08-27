@@ -14,18 +14,18 @@ class App extends Component {
     rosterList: [],
     selectedTeam: undefined,
     rosterClosed: false,
-    dallasFuel: [],
-    phillyFusion: [],
-    houstonOutlaws: [],
-    bostonUprising: [],
-    newYorkExcelsior: [],
-    sanFranShock: [],
-    laValiant: [],
-    laGladiators: [],
-    floridaMayhem: [],
-    shanghaiDragons: [],
-    seoulDynasty: [],
-    londonSpitfire: [],
+    DAL: [],
+    PHI: [],
+    HOU: [],
+    BOS: [],
+    NYE: [],
+    SFS: [],
+    VAL: [],
+    GLA: [],
+    FLA: [],
+    SHD: [],
+    SEO: [],
+    LDN: []
   }
 
   getApi = async (e) => {
@@ -52,66 +52,66 @@ class App extends Component {
 
     // const teamPlayersList = data.competitors.filter(team => (team.competitor.name === teamNamesList));
 
-    let dallasFuel = [];
-    let phillyFusion = [];
-    let houstonOutlaws = [];
-    let bostonUprising = [];
-    let newYorkExcelsior = [];
-    let sanFranShock = [];
-    let laValiant = [];
-    let laGladiators = [];
-    let floridaMayhem = [];
-    let shanghaiDragons = [];
-    let seoulDynasty = [];
-    let londonSpitfire = [];
+    let DAL = [];
+    let PHI = [];
+    let HOU = [];
+    let BOS = [];
+    let NYE = [];
+    let SFS = [];
+    let VAL = [];
+    let GLA = [];
+    let FLA = [];
+    let SHD = [];
+    let SEO = [];
+    let LDN = [];
 
     const teamTeamTeam = teamNamesList.map(teams => {
       if(teams === "Dallas Fuel") {
-        dallasFuel = data.competitors
+        DAL = data.competitors
           .filter(team => team.competitor.name === "Dallas Fuel")
           .map(roster => roster.competitor.players);
       } else if (teams === "Philadelphia Fusion") {
-        phillyFusion = data.competitors
+        PHI = data.competitors
           .filter(team => team.competitor.name === "Philadelphia Fusion")
           .map(roster => roster.competitor.players);
       } else if (teams === "Houston Outlaws") {
-        houstonOutlaws = data.competitors
+        HOU = data.competitors
           .filter(team => team.competitor.name === "Houston Outlaws")
           .map(roster => roster.competitor.players);
       } else if (teams === "Boston Uprising") {
-        bostonUprising = data.competitors
+        BOS = data.competitors
           .filter(team => team.competitor.name === "Boston Uprising")
           .map(roster => roster.competitor.players);
       } else if (teams === "New York Excelsior") {
-        newYorkExcelsior = data.competitors
+        NYE = data.competitors
           .filter(team => team.competitor.name === "New York Excelsior")
           .map(roster => roster.competitor.players);
       } else if (teams === "San Francisco Shock") {
-        sanFranShock = data.competitors
+        SFS = data.competitors
           .filter(team => team.competitor.name === "San Francisco Shock")
           .map(roster => roster.competitor.players);
       } else if (teams === "Los Angeles Valiant") {
-        laValiant = data.competitors
+        VAL = data.competitors
           .filter(team => team.competitor.name === "Los Angeles Valiant")
           .map(roster => roster.competitor.players);
       } else if (teams === "Los Angeles Gladiators") {
-        laGladiators = data.competitors
+        GLA = data.competitors
           .filter(team => team.competitor.name === "Los Angeles Gladiators")
           .map(roster => roster.competitor.players);
       } else if (teams === "Florida Mayhem") {
-        floridaMayhem = data.competitors
+        FLA = data.competitors
           .filter(team => team.competitor.name === "Florida Mayhem")
           .map(roster => roster.competitor.players);
       } else if (teams === "Shanghai Dragons") {
-        shanghaiDragons = data.competitors
+        SHD = data.competitors
           .filter(team => team.competitor.name === "Shanghai Dragons")
           .map(roster => roster.competitor.players);
       } else if (teams === "Seoul Dynasty") {
-        seoulDynasty = data.competitors
+        SEO = data.competitors
           .filter(team => team.competitor.name === "Seoul Dynasty")
           .map(roster => roster.competitor.players);
       } else if (teams === "London Spitfire") {
-        londonSpitfire = data.competitors
+        LDN = data.competitors
           .filter(team => team.competitor.name === "London Spitfire")
           .map(roster => roster.competitor.players);
       } else {
@@ -127,25 +127,25 @@ class App extends Component {
 
     this.setState({
       teamList,
-      dallasFuel,
-      phillyFusion,
-      houstonOutlaws,
-      bostonUprising,
-      newYorkExcelsior,
-      sanFranShock,
-      laValiant,
-      laGladiators,
-      floridaMayhem,
-      shanghaiDragons,
-      seoulDynasty,
-      londonSpitfire
+      DAL,
+      PHI,
+      HOU,
+      BOS,
+      NYE,
+      SFS,
+      VAL,
+      GLA,
+      FLA,
+      SHD,
+      SEO,
+      LDN
     })
     // console.log(teamNamesList);
   }
 
-  toggleRoster = () => {
+  toggleRoster = (val) => {
     if (this.state.rosterClosed === false) {
-      console.log(this.state.dallasFuel[0].map(p => p.player.name))
+      console.log(this.state.val[0].map(p => p.player.name))
     } else {
       console.log("closed")
     }
@@ -160,7 +160,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <TeamPage teamList={this.state.teamList} getApi={this.getApi()} toggleRoster={this.toggleRoster}/>
+        <TeamPage teamList={this.state.teamList} getApi={this.getApi()} toggleRoster={this.toggleRoster} id={this.state.id} />
       </div>
     );
   }
