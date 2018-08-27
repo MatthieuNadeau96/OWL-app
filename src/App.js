@@ -17,6 +17,16 @@ class App extends Component {
     const api_call = await fetch('https://api.overwatchleague.com/teams');
     const data = await api_call.json()
 
+    // const rosterList = data.competitors.competitor.players.map(playerResults => (
+    //   {
+    //     id: `${playerResults.player.id}`,
+    //     name: `${playerResults.player.name}`,
+    //     givenName: `${playerResults.player.givenName}`,
+    //     familyName: `${playerResults.player.familyName}`,
+    //     role: `${playerResults.player.role}`
+    //   }
+    // ))
+
 
     const teamList = data.competitors.map(teamResults => (
       {
@@ -30,15 +40,34 @@ class App extends Component {
         icon: `${teamResults.competitor.icon}`
       }
     ))
+    
+    const teams = data.competitors.filter(team => team.competitor.name === "Dallas Fuel").map(roster => roster.competitor.players);
+
+    const rosterList = teams[0];
+
+
+    // console.log(teams[0]);
     this.setState({
-      teamList
+      teamList,
+      rosterList
     })
   }
 
   render() {
+    let { rosterList } = this.state;
+
     return (
       <div className="App">
         <TeamPage teamList={this.state.teamList} getApi={this.getApi()} showRoster={this.showRoster}/>
+          <div className="rightSide">
+            <ul>
+              {rosterList.map(item => (
+                <li key={item.player.id}>
+                  Name: {item.player.name} | {item.player.familyName}
+                </li>
+              ))}
+            </ul>
+          </div>
       </div>
     );
   }
