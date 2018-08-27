@@ -82,3 +82,12 @@
 
 .viewRosterBtn {
 }
+
+ul {
+  list-style: none;
+}
+
+span {
+  font-weight: bold;
+  font-size: 1.3em;
+}

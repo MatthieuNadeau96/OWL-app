@@ -13,11 +13,13 @@ const TeamRoster = props => {
     </div>
     <div className="rightSide">
       <ul>
-        {items.map(item => (
-          <li key={item.id}>
-            Name: {item.name} | {item.familyName}
-          </li>
-        ))}
+        {
+          this.props.rosterList.map(item => (
+            <li key={item.player.id}>
+              <span>{item.player.name}</span> <br/>{item.player.givenName} {item.player.familyName}
+            </li>
+          ))
+        }
       </ul>
     </div>
   </div>
