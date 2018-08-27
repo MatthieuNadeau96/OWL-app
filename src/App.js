@@ -143,10 +143,49 @@ class App extends Component {
     // console.log(teamNamesList);
   }
 
-  toggleRoster = (val) => {
+  toggleRoster = (e) => {
+    let {DAL,PHI,HOU,BOS,NYE,SFS,VAL,GLA,FLA,SHD,SEO,LDN} = this.state;
+    console.log(e.target);
     if (this.state.rosterClosed === false) {
-      console.log(this.state.val[0].map(p => p.player.name))
-    } else {
+      const i = e.target.id
+      if(i === "DAL") {
+        console.log(DAL[0].map(p => p.player.name))
+      }
+      if (i === "PHI") {
+        console.log(PHI[0].map(p => p.player.name))
+      }
+      if (i === "HOU") {
+        console.log(HOU[0].map(p => p.player.name))
+      }
+      if (i === "BOS") {
+        console.log(BOS[0].map(p => p.player.name))
+      }
+      if (i === "NYE") {
+        console.log(NYE[0].map(p => p.player.name))
+      }
+      if (i === "SFS") {
+        console.log(SFS[0].map(p => p.player.name))
+      }
+      if (i === "VAL") {
+        console.log(VAL[0].map(p => p.player.name))
+      }
+      if (i === "GLA") {
+        console.log(GLA[0].map(p => p.player.name))
+      }
+      if (i === "FLA") {
+        console.log(FLA[0].map(p => p.player.name))
+      }
+      if (i === "SHD") {
+        console.log(SHD[0].map(p => p.player.name))
+      }
+      if (i === "SEO") {
+        console.log(SEO[0].map(p => p.player.name))
+      }
+      if (i === "LDN") {
+        console.log(LDN[0].map(p => p.player.name))
+      }
+    }
+    else {
       console.log("closed")
     }
 
@@ -160,7 +199,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <TeamPage teamList={this.state.teamList} getApi={this.getApi()} toggleRoster={this.toggleRoster} id={this.state.id} />
+        <TeamPage teamList={this.state.teamList} getApi={this.getApi} toggleRoster={this.toggleRoster} />
       </div>
     );
   }
