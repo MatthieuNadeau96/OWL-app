@@ -73,7 +73,8 @@ class App extends Component {
             id: `${p.player.id}`,
             userName: `${p.player.name}`,
             firstName: `${p.player.givenName}`,
-            lastName: `${p.player.familyName}`
+            lastName: `${p.player.familyName}`,
+            role: `${p.player.attributes.role}`
           }
         ))
         this.setState({DAL: newDAL});
@@ -86,7 +87,8 @@ class App extends Component {
             id: `${p.player.id}`,
             userName: `${p.player.name}`,
             firstName: `${p.player.givenName}`,
-            lastName: `${p.player.familyName}`
+            lastName: `${p.player.familyName}`,
+            role: `${p.player.attributes.role}`
           }
         ))
         this.setState({PHI: newPHI});
@@ -99,7 +101,8 @@ class App extends Component {
             id: `${p.player.id}`,
             userName: `${p.player.name}`,
             firstName: `${p.player.givenName}`,
-            lastName: `${p.player.familyName}`
+            lastName: `${p.player.familyName}`,
+            role: `${p.player.attributes.role}`
           }
         ))
         this.setState({HOU: newHOU});
@@ -112,7 +115,8 @@ class App extends Component {
             id: `${p.player.id}`,
             userName: `${p.player.name}`,
             firstName: `${p.player.givenName}`,
-            lastName: `${p.player.familyName}`
+            lastName: `${p.player.familyName}`,
+            role: `${p.player.attributes.role}`
           }
         ))
         this.setState({BOS: newBOS});
@@ -125,7 +129,8 @@ class App extends Component {
             id: `${p.player.id}`,
             userName: `${p.player.name}`,
             firstName: `${p.player.givenName}`,
-            lastName: `${p.player.familyName}`
+            lastName: `${p.player.familyName}`,
+            role: `${p.player.attributes.role}`
           }
         ))
         this.setState({NYE: newNYE});
@@ -138,7 +143,8 @@ class App extends Component {
             id: `${p.player.id}`,
             userName: `${p.player.name}`,
             firstName: `${p.player.givenName}`,
-            lastName: `${p.player.familyName}`
+            lastName: `${p.player.familyName}`,
+            role: `${p.player.attributes.role}`
           }
         ))
         this.setState({SFS: newSFS});
@@ -151,7 +157,8 @@ class App extends Component {
             id: `${p.player.id}`,
             userName: `${p.player.name}`,
             firstName: `${p.player.givenName}`,
-            lastName: `${p.player.familyName}`
+            lastName: `${p.player.familyName}`,
+            role: `${p.player.attributes.role}`
           }
         ))
         this.setState({VAL: newVAL});
@@ -164,7 +171,8 @@ class App extends Component {
             id: `${p.player.id}`,
             userName: `${p.player.name}`,
             firstName: `${p.player.givenName}`,
-            lastName: `${p.player.familyName}`
+            lastName: `${p.player.familyName}`,
+            role: `${p.player.attributes.role}`
           }
         ))
         this.setState({GLA: newGLA});
@@ -177,7 +185,8 @@ class App extends Component {
             id: `${p.player.id}`,
             userName: `${p.player.name}`,
             firstName: `${p.player.givenName}`,
-            lastName: `${p.player.familyName}`
+            lastName: `${p.player.familyName}`,
+            role: `${p.player.attributes.role}`
           }
         ))
         this.setState({FLA: newFLA});
@@ -190,7 +199,8 @@ class App extends Component {
             id: `${p.player.id}`,
             userName: `${p.player.name}`,
             firstName: `${p.player.givenName}`,
-            lastName: `${p.player.familyName}`
+            lastName: `${p.player.familyName}`,
+            role: `${p.player.attributes.role}`
           }
         ))
         this.setState({SHD: newSHD});
@@ -203,7 +213,8 @@ class App extends Component {
             id: `${p.player.id}`,
             userName: `${p.player.name}`,
             firstName: `${p.player.givenName}`,
-            lastName: `${p.player.familyName}`
+            lastName: `${p.player.familyName}`,
+            role: `${p.player.attributes.role}`
           }
         ))
         this.setState({SEO: newSEO});
@@ -216,7 +227,8 @@ class App extends Component {
             id: `${p.player.id}`,
             userName: `${p.player.name}`,
             firstName: `${p.player.givenName}`,
-            lastName: `${p.player.familyName}`
+            lastName: `${p.player.familyName}`,
+            role: `${p.player.attributes.role}`
           }
         ))
         this.setState({LDN: newLDN});
