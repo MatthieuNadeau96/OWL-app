@@ -13,7 +13,7 @@ class App extends Component {
     teamNamesList: [],
     rosterList: [],
     selectedTeam: undefined,
-    rosterClosed: false,
+    rosterClosed: true,
     DAL: [],
     PHI: [],
     HOU: [],
@@ -25,7 +25,8 @@ class App extends Component {
     FLA: [],
     SHD: [],
     SEO: [],
-    LDN: []
+    LDN: [],
+    theTeam: []
   }
 
   getApi = async (e) => {
@@ -234,39 +235,51 @@ class App extends Component {
       const i = e.target.id
       if(i === "DAL") {
         console.log(DAL)
+        this.setState({theTeam: DAL});
       }
       if (i === "PHI") {
         console.log(PHI)
+        this.setState({theTeam: PHI});
       }
       if (i === "HOU") {
         console.log(HOU)
+        this.setState({theTeam: HOU});
       }
       if (i === "BOS") {
         console.log(BOS)
+        this.setState({theTeam: BOS});
       }
       if (i === "NYE") {
         console.log(NYE)
+        this.setState({theTeam: NYE});
       }
       if (i === "SFS") {
         console.log(SFS)
+        this.setState({theTeam: SFS});
       }
       if (i === "VAL") {
         console.log(VAL)
+        this.setState({theTeam: VAL});
       }
       if (i === "GLA") {
         console.log(GLA)
+        this.setState({theTeam: GLA});
       }
       if (i === "FLA") {
         console.log(FLA)
+        this.setState({theTeam: FLA});
       }
       if (i === "SHD") {
         console.log(SHD)
+        this.setState({theTeam: SHD});
       }
       if (i === "SEO") {
         console.log(SEO)
+        this.setState({theTeam: SEO});
       }
       if (i === "LDN") {
         console.log(LDN)
+        this.setState({theTeam: LDN});
       }
     }
     else {
@@ -287,13 +300,7 @@ class App extends Component {
       <div className="App">
         <TeamPage teamList={this.state.teamList} getApi={this.getApi} toggleRoster={this.toggleRoster} />
         {
-          !rosterClosed ? this.state.BOS.map(player => {
-            return (
-              <li key={player.id}>
-                <span>{player.userName}</span> <br/>{player.firstName} {player.lastName}
-              </li>
-            )
-          }) : null
+          !rosterClosed ? <TeamRoster theTeam={this.state.theTeam}/> : null
         }
 
       </div>
