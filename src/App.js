@@ -48,9 +48,6 @@ class App extends Component {
     ))
 
     const teamNamesList = data.competitors.map(team => team.competitor.name);
-    // const rosterList = teams[0];
-
-    // const teamPlayersList = data.competitors.filter(team => (team.competitor.name === teamNamesList));
 
     let DAL = [];
     let PHI = [];
@@ -226,15 +223,8 @@ class App extends Component {
         return null;
       }
     })
-    // console.log("Fuel: " + dallasFuel[0].map(p => p.player.name));
-    // console.log("Fusion: " + phillyFusion[0].map(p => p.player.name));
-    // console.log("Outlaws: " + houstonOutlaws[0].map(p => p.player.name));
-    // console.log("Uprising: " + bostonUprising[0].map(p => p.player.name));
-    // console.log("Dynasty: " + seoulDynasty[0].map(p => p.player.name));
-    // console.log("NYXL: " + newYorkExcelsior[0].map(p => p.player.name));
 
     this.setState({teamList})
-    // console.log(teamNamesList);
   }
 
   toggleRoster = (e) => {
