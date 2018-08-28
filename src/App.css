@@ -83,8 +83,42 @@
 .viewRosterBtn {
 }
 
+.teamRoster {
+  width: 100%;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-height: 30%;
+}
+
+.leftSide {
+  width: 30%;
+}
+
+.rightSide {
+  width: 70%;
+}
+
 ul {
+  margin: 0 0 0 50px;
+  padding: 20px;
+  background-color: rgba(200, 200, 200, 0.7);
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-height: 100%;
+  width: 100%;
+}
+
+li {
+  padding: 5px;
+  width: 20%;
 }
 
 span {
