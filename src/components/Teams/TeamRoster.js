@@ -1,9 +1,6 @@
 import React from 'react';
 
-
-
-const TeamRoster = props => {
-
+const TeamRoster = (props) => (
   <div className="teamRoster">
     <div className="leftSide">
       <img className="icon" alt="teamIcon"/>
@@ -14,35 +11,17 @@ const TeamRoster = props => {
     <div className="rightSide">
       <ul>
         {
-          this.props.rosterList.map(item => (
-            <li key={item.player.id}>
-              <span>{item.player.name}</span> <br/>{item.player.givenName} {item.player.familyName}
-            </li>
-          ))
+          this.props.BOS.length > 0 ? this.props.BOS.map(p => {
+            return (
+              <li key={p.player.id}>
+                <span>{p.player.name}</span> <br/>{p.player.givenName} {p.player.familyName}
+              </li>
+            )
+          }) : null
         }
       </ul>
     </div>
   </div>
-};
+);
 
 export default TeamRoster;
-
-
-
-
-// {
-//   this.props.playerList.length > 0 ? this.props.playerList.map(team => {
-//     return (
-//       <div className="card" key={team.id}>
-//         <img alt="teamlogo" className="logo" src={team.logo}/>
-//         <div className="textContainer">
-//           <div className="title">{team.name}</div>
-//           <div className="homeLocation">{team.homeLocation}</div>
-//         </div>
-//         <div className="viewRosterContainer">
-//           <div className="viewRosterBtn">View Roster</div>
-//         </div>
-//       </div>
-//     )
-//   }) : null
-// }

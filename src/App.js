@@ -70,50 +70,158 @@ class App extends Component {
         DAL = data.competitors
           .filter(team => team.competitor.name === "Dallas Fuel")
           .map(roster => roster.competitor.players);
-      } else if (teams === "Philadelphia Fusion") {
+        const newDAL = DAL[0].map(p => (
+          {
+            id: `${p.player.id}`,
+            userName: `${p.player.name}`,
+            firstName: `${p.player.givenName}`,
+            lastName: `${p.player.familyName}`
+          }
+        ))
+        this.setState({DAL: newDAL});
+      } if (teams === "Philadelphia Fusion") {
         PHI = data.competitors
           .filter(team => team.competitor.name === "Philadelphia Fusion")
           .map(roster => roster.competitor.players);
-      } else if (teams === "Houston Outlaws") {
+        const newPHI = PHI[0].map(p => (
+          {
+            id: `${p.player.id}`,
+            userName: `${p.player.name}`,
+            firstName: `${p.player.givenName}`,
+            lastName: `${p.player.familyName}`
+          }
+        ))
+        this.setState({PHI: newPHI});
+      } if (teams === "Houston Outlaws") {
         HOU = data.competitors
           .filter(team => team.competitor.name === "Houston Outlaws")
           .map(roster => roster.competitor.players);
-      } else if (teams === "Boston Uprising") {
+        const newHOU = HOU[0].map(p => (
+          {
+            id: `${p.player.id}`,
+            userName: `${p.player.name}`,
+            firstName: `${p.player.givenName}`,
+            lastName: `${p.player.familyName}`
+          }
+        ))
+        this.setState({HOU: newHOU});
+      } if (teams === "Boston Uprising") {
         BOS = data.competitors
           .filter(team => team.competitor.name === "Boston Uprising")
           .map(roster => roster.competitor.players);
-      } else if (teams === "New York Excelsior") {
+        const newBOS = BOS[0].map(p => (
+          {
+            id: `${p.player.id}`,
+            userName: `${p.player.name}`,
+            firstName: `${p.player.givenName}`,
+            lastName: `${p.player.familyName}`
+          }
+        ))
+        this.setState({BOS: newBOS});
+      } if (teams === "New York Excelsior") {
         NYE = data.competitors
           .filter(team => team.competitor.name === "New York Excelsior")
           .map(roster => roster.competitor.players);
-      } else if (teams === "San Francisco Shock") {
+        const newNYE = NYE[0].map(p => (
+          {
+            id: `${p.player.id}`,
+            userName: `${p.player.name}`,
+            firstName: `${p.player.givenName}`,
+            lastName: `${p.player.familyName}`
+          }
+        ))
+        this.setState({NYE: newNYE});
+      } if (teams === "San Francisco Shock") {
         SFS = data.competitors
           .filter(team => team.competitor.name === "San Francisco Shock")
           .map(roster => roster.competitor.players);
-      } else if (teams === "Los Angeles Valiant") {
+        const newSFS = SFS[0].map(p => (
+          {
+            id: `${p.player.id}`,
+            userName: `${p.player.name}`,
+            firstName: `${p.player.givenName}`,
+            lastName: `${p.player.familyName}`
+          }
+        ))
+        this.setState({SFS: newSFS});
+      } if (teams === "Los Angeles Valiant") {
         VAL = data.competitors
           .filter(team => team.competitor.name === "Los Angeles Valiant")
           .map(roster => roster.competitor.players);
-      } else if (teams === "Los Angeles Gladiators") {
+        const newVAL = VAL[0].map(p => (
+          {
+            id: `${p.player.id}`,
+            userName: `${p.player.name}`,
+            firstName: `${p.player.givenName}`,
+            lastName: `${p.player.familyName}`
+          }
+        ))
+        this.setState({VAL: newVAL});
+      } if (teams === "Los Angeles Gladiators") {
         GLA = data.competitors
           .filter(team => team.competitor.name === "Los Angeles Gladiators")
           .map(roster => roster.competitor.players);
-      } else if (teams === "Florida Mayhem") {
+        const newGLA = GLA[0].map(p => (
+          {
+            id: `${p.player.id}`,
+            userName: `${p.player.name}`,
+            firstName: `${p.player.givenName}`,
+            lastName: `${p.player.familyName}`
+          }
+        ))
+        this.setState({GLA: newGLA});
+      } if (teams === "Florida Mayhem") {
         FLA = data.competitors
           .filter(team => team.competitor.name === "Florida Mayhem")
           .map(roster => roster.competitor.players);
-      } else if (teams === "Shanghai Dragons") {
+        const newFLA = FLA[0].map(p => (
+          {
+            id: `${p.player.id}`,
+            userName: `${p.player.name}`,
+            firstName: `${p.player.givenName}`,
+            lastName: `${p.player.familyName}`
+          }
+        ))
+        this.setState({FLA: newFLA});
+      } if (teams === "Shanghai Dragons") {
         SHD = data.competitors
           .filter(team => team.competitor.name === "Shanghai Dragons")
           .map(roster => roster.competitor.players);
-      } else if (teams === "Seoul Dynasty") {
+        const newSHD = SHD[0].map(p => (
+          {
+            id: `${p.player.id}`,
+            userName: `${p.player.name}`,
+            firstName: `${p.player.givenName}`,
+            lastName: `${p.player.familyName}`
+          }
+        ))
+        this.setState({SHD: newSHD});
+      } if (teams === "Seoul Dynasty") {
         SEO = data.competitors
           .filter(team => team.competitor.name === "Seoul Dynasty")
           .map(roster => roster.competitor.players);
-      } else if (teams === "London Spitfire") {
+        const newSEO = SEO[0].map(p => (
+          {
+            id: `${p.player.id}`,
+            userName: `${p.player.name}`,
+            firstName: `${p.player.givenName}`,
+            lastName: `${p.player.familyName}`
+          }
+        ))
+        this.setState({SEO: newSEO});
+      } if (teams === "London Spitfire") {
         LDN = data.competitors
           .filter(team => team.competitor.name === "London Spitfire")
           .map(roster => roster.competitor.players);
+        const newLDN = LDN[0].map(p => (
+          {
+            id: `${p.player.id}`,
+            userName: `${p.player.name}`,
+            firstName: `${p.player.givenName}`,
+            lastName: `${p.player.familyName}`
+          }
+        ))
+        this.setState({LDN: newLDN});
       } else {
         return null;
       }
@@ -125,21 +233,7 @@ class App extends Component {
     // console.log("Dynasty: " + seoulDynasty[0].map(p => p.player.name));
     // console.log("NYXL: " + newYorkExcelsior[0].map(p => p.player.name));
 
-    this.setState({
-      teamList,
-      DAL,
-      PHI,
-      HOU,
-      BOS,
-      NYE,
-      SFS,
-      VAL,
-      GLA,
-      FLA,
-      SHD,
-      SEO,
-      LDN
-    })
+    this.setState({teamList})
     // console.log(teamNamesList);
   }
 
@@ -149,40 +243,40 @@ class App extends Component {
     if (this.state.rosterClosed === false) {
       const i = e.target.id
       if(i === "DAL") {
-        console.log(DAL[0].map(p => p.player.name))
+        console.log(DAL)
       }
       if (i === "PHI") {
-        console.log(PHI[0].map(p => p.player.name))
+        console.log(PHI)
       }
       if (i === "HOU") {
-        console.log(HOU[0].map(p => p.player.name))
+        console.log(HOU)
       }
       if (i === "BOS") {
-        console.log(BOS[0].map(p => p.player.name))
+        console.log(BOS)
       }
       if (i === "NYE") {
-        console.log(NYE[0].map(p => p.player.name))
+        console.log(NYE)
       }
       if (i === "SFS") {
-        console.log(SFS[0].map(p => p.player.name))
+        console.log(SFS)
       }
       if (i === "VAL") {
-        console.log(VAL[0].map(p => p.player.name))
+        console.log(VAL)
       }
       if (i === "GLA") {
-        console.log(GLA[0].map(p => p.player.name))
+        console.log(GLA)
       }
       if (i === "FLA") {
-        console.log(FLA[0].map(p => p.player.name))
+        console.log(FLA)
       }
       if (i === "SHD") {
-        console.log(SHD[0].map(p => p.player.name))
+        console.log(SHD)
       }
       if (i === "SEO") {
-        console.log(SEO[0].map(p => p.player.name))
+        console.log(SEO)
       }
       if (i === "LDN") {
-        console.log(LDN[0].map(p => p.player.name))
+        console.log(LDN)
       }
     }
     else {
@@ -190,16 +284,28 @@ class App extends Component {
     }
 
     this.setState((prevState) => {
-      return {rosterClosed: !prevState.rosterClosed}
+      return {
+        rosterClosed: !prevState.rosterClosed
+      }
     })
 
   }
 
   render() {
-
+    const {rosterClosed} = this.state;
     return (
       <div className="App">
         <TeamPage teamList={this.state.teamList} getApi={this.getApi} toggleRoster={this.toggleRoster} />
+        {
+          !rosterClosed ? this.state.BOS.map(player => {
+            return (
+              <li key={player.id}>
+                <span>{player.userName}</span> <br/>{player.firstName} {player.lastName}
+              </li>
+            )
+          }) : null
+        }
+
       </div>
     );
   }
