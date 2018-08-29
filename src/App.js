@@ -243,8 +243,8 @@ class App extends Component {
 
   toggleRoster = (e) => {
     let {DAL,PHI,HOU,BOS,NYE,SFS,VAL,GLA,FLA,SHD,SEO,LDN} = this.state;
-    console.log(e.target);
     if (this.state.rosterClosed === false) {
+      console.log('open')
       const i = e.target.id
       if(i === "DAL") {
         this.setState({theTeam: DAL});
