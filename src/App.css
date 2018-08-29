@@ -15,7 +15,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 150px 0 150px 0;
+  padding: 20px 0 20px 0;
 }
 
 @media (max-width: 1200px ) {
@@ -124,4 +124,21 @@ li {
 span {
   font-weight: bold;
   font-size: 1.3em;
+}
+
+.display {
+  text-align: center;
+}
+
+.displayTeamsBtn {
+  background-color: yellow;
+  border: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  padding: 20px 80px;
+  margin: 80px auto;
+}
+
+.hideBtn {
+  display: none;
 }

@@ -4,8 +4,8 @@ class TeamPage extends Component {
 
   render() {
     return (
-      <div>
-        <button onClick={this.props.getApi}>Get</button>
+      <div className="display">
+        <button className={this.props.displayTeams ? 'displayTeamsBtn hideBtn' : 'displayTeamsBtn'} onClick={this.props.getApi}>Get</button>
         <div className="container">
           {
             this.props.teamList.length > 0 ? this.props.teamList.map(team => {

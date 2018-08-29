@@ -26,7 +26,8 @@ class App extends Component {
     SHD: [],
     SEO: [],
     LDN: [],
-    theTeam: []
+    theTeam: [],
+    displayTeams: false
   }
 
   getApi = async (e) => {
@@ -294,11 +295,16 @@ class App extends Component {
 
   }
 
+  toggleClass = () => {
+    const currentState = this.state.displayTeams
+    this.setState({displayTeams: !currentState});
+  }
+
   render() {
     const {rosterClosed} = this.state;
     return (
       <div className="App">
-        <TeamPage teamList={this.state.teamList} getApi={this.getApi} toggleRoster={this.toggleRoster} />
+        <TeamPage displayTeams={this.state.displayTeams} teamList={this.state.teamList} getApi={() => {this.getApi(); this.toggleClass()}} toggleRoster={this.toggleRoster} />
         {
           !rosterClosed ? <TeamRoster theTeam={this.state.theTeam}/> : null
         }
